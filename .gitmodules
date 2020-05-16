@@ -37,7 +37,7 @@
 	url = https://github.com/pkp/reviewReport
 [submodule "lib/ui-library"]
 	path = lib/ui-library
-	url = https://github.com/pkp/ui-library
+	url = https://github.com/repliza/ui-library.git
 [submodule "plugins/generic/citationStyleLanguage"]
 	path = plugins/generic/citationStyleLanguage
 	url = https://github.com/pkp/citationStyleLanguage.git
