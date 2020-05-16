@@ -341,6 +341,45 @@
 			"validation": [
 				"nullable"
 			]
+		},
+		"pageFooterLogoImage": {
+			"type": "object",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			],
+			"properties": {
+				"temporaryFileId": {
+					"type": "integer",
+					"writeOnly": true
+				},
+				"name": {
+					"type": "string"
+				},
+				"uploadName": {
+					"type": "string"
+				},
+				"width": {
+					"type": "integer"
+				},
+				"height": {
+					"type": "integer"
+				},
+				"dateUploaded": {
+					"type": "string"
+				},
+				"altText": {
+					"type": "string"
+				}
+			}
+		},
+		"pageFooterLogoImageLinkUrl": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable",
+				"url"
+			]
 		}
 	}
 }

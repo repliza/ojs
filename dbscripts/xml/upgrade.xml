@@ -74,6 +74,7 @@
 	<schema file="lib/pkp/xml/schema/scheduledTasks.xml" />
 	<schema file="lib/pkp/xml/schema/temporaryFiles.xml" />
 	<schema file="lib/pkp/xml/schema/metadata.xml" />
+	<schema file="lib/pkp/xml/schema/customForms.xml" />
 	<schema file="lib/pkp/xml/schema/reviews.xml" />
 	<schema file="lib/pkp/xml/schema/reviewForms.xml" />
 	<schema file="lib/pkp/xml/schema/controlledVocab.xml" />

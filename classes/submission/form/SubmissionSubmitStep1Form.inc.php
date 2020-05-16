@@ -20,7 +20,11 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 	 * Constructor.
 	 */
 	function __construct($context, $submission = null) {
-		parent::__construct($context, $submission);
+		$submissionChecklistFormImplementation = new PKPSubmissionChecklistFormImplementation($this);
+		HookRegistry::call(strtolower_codesafe(get_class($this)) . '::createSubmissionChecklistFormImplementation',
+			array($this, &$submissionChecklistFormImplementation));
+
+		parent::__construct($context, $submission, $submissionChecklistFormImplementation);
 		$this->addCheck(new FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', array(DAORegistry::getDAO('SectionDAO'), 'sectionExists'), array($context->getId())));
 	}
 

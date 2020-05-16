@@ -76,6 +76,9 @@ class TemplateManager extends PKPTemplateManager {
 					'displayPageHeaderTitle' => $context->getLocalizedPageHeaderTitle(),
 					'displayPageHeaderLogo' => $context->getLocalizedPageHeaderLogo(),
 					'displayPageHeaderLogoAltText' => $context->getLocalizedData('pageHeaderLogoImageAltText'),
+					'displayPageFooterLogo' => $context->getLocalizedPageFooterLogo(),
+					'displayPageFooterLogoAltText' => $context->getLocalizedData('pageFooterLogoImageAltText'),
+					'displayPageFooterLogoLinkUrl' => $context->getLocalizedData('pageFooterLogoImageLinkUrl'),
 					'numPageLinks' => $context->getData('numPageLinks'),
 					'itemsPerPage' => $context->getData('itemsPerPage'),
 					'enableAnnouncements' => $context->getData('enableAnnouncements'),
@@ -111,6 +114,8 @@ class TemplateManager extends PKPTemplateManager {
 					'primaryLocale' => $site->getPrimaryLocale(),
 					'supportedLocales' => $site->getSupportedLocaleNames(),
 					'pageFooter' => $site->getLocalizedData('pageFooter'),
+					'displayPageFooterLogo' => $site->getLocalizedData('pageFooterLogoImage'),
+					'displayPageFooterLogoLinkUrl' => $site->getLocalizedData('pageFooterLogoImageLinkUrl'),
 				));
 
 			}

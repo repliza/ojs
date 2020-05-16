@@ -44,11 +44,23 @@ class Journal extends Context {
 	}
 
 	/**
-	 * Get "localized" journal page logo (if applicable).
+	 * Get "localized" journal page header logo (if applicable).
 	 * @return string
 	 */
 	function getLocalizedPageHeaderLogo() {
 		$logoArray = $this->getData('pageHeaderLogoImage');
+		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
+			if (isset($logoArray[$locale])) return $logoArray[$locale];
+		}
+		return null;
+	}
+
+	/**
+	 * Get "localized" journal page footer logo (if applicable).
+	 * @return string
+	 */
+	function getLocalizedPageFooterLogo() {
+		$logoArray = $this->getData('pageFooterLogoImage');
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
 			if (isset($logoArray[$locale])) return $logoArray[$locale];
 		}

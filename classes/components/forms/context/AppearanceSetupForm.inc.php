@@ -15,6 +15,7 @@
 namespace APP\components\forms\context;
 use \PKP\components\forms\context\PKPAppearanceSetupForm;
 use \PKP\components\forms\FieldUploadImage;
+use \PKP\components\forms\FieldText;
 
 class AppearanceSetupForm extends PKPAppearanceSetupForm {
 
@@ -34,5 +35,23 @@ class AppearanceSetupForm extends PKPAppearanceSetupForm {
 					'url' => $temporaryFileApiUrl,
 				],
 			]), [FIELD_POSITION_AFTER, 'pageHeaderLogoImage']);
+
+
+		$this->addField(new FieldUploadImage('pageFooterLogoImage', [
+				'label' => __('manager.setup.pageFooterLogoImage'),
+				'value' => $context->getData('pageFooterLogoImage'),
+				'isMultilingual' => true,
+				'baseUrl' => $baseUrl,
+				'options' => [
+					'url' => $temporaryFileApiUrl,
+				],
+			]), [FIELD_POSITION_AFTER, 'pageFooter']);
+
+		$this->addField(new FieldText('pageFooterLogoImageLinkUrl', [
+				'label' => __('manager.setup.pageFooterLogoImageLinkUrl'),
+				'isMultilingual' => true,
+				'value' => $context->getData('pageFooterLogoImageLinkUrl'),
+				'size' => 'large',
+			]), [FIELD_POSITION_AFTER, 'pageFooterLogoImage']);
 	}
 }

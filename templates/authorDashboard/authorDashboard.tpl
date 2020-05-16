@@ -96,10 +96,15 @@
 					<pkp-header class="pkpPublication__header">
 						<span class="pkpPublication__status">
 							<strong>{{ i18n.status }}</strong>
+							{if $workflowData.workingPublication.useFinishRetractWorkflow}
+							<span v-if="workingPublication.status === getConstant('STATUS_FINISHED')" class="pkpPublication__statusPublished">{translate key="publication.status.finished"}</span>
+							<span v-else class="pkpPublication__statusUnpublished">{translate key="publication.status.unfinished"}</span>
+							{else}
 							<span v-if="workingPublication.status === getConstant('STATUS_QUEUED') && workingPublication.id === currentPublication.id" class="pkpPublication__statusUnpublished">{translate key="publication.status.unscheduled"}</span>
 							<span v-else-if="workingPublication.status === getConstant('STATUS_SCHEDULED')">{translate key="publication.status.scheduled"}</span>
 							<span v-else-if="workingPublication.status === getConstant('STATUS_PUBLISHED')" class="pkpPublication__statusPublished">{translate key="publication.status.published"}</span>
 							<span v-else class="pkpPublication__statusUnpublished">{translate key="publication.status.unpublished"}</span>
+							{/if}
 						</span>
 							<span v-if="publicationList.length > 1" class="pkpPublication__version">
 								<strong tabindex="0">{{ i18n.version }}</strong> {{ workingPublication.id }}
@@ -120,7 +125,14 @@
 												<template v-if="publication.status === getConstant('STATUS_QUEUED') && publication.id === currentPublication.id">{translate key="publication.status.unscheduled"}</template>
 												<template v-else-if="publication.status === getConstant('STATUS_SCHEDULED')">{translate key="publication.status.scheduled"}</template>
 												<template v-else-if="publication.status === getConstant('STATUS_PUBLISHED')">{translate key="publication.status.published"}</template>
-												<template v-else>{translate key="publication.status.unpublished"}</template>
+												<template v-else-if="publication.status === getConstant('STATUS_FINISHED')">{translate key="publication.status.finished"}</template>
+												<template v-else>
+													{if $workflowData.workingPublication.useFinishRetractWorkflow}
+														{translate key="publication.status.unfinished"}
+													{else}
+														{translate key="publication.status.unpublished"}
+													{/if}
+												</template>
 											</button>
 										</li>
 									</ul>
@@ -132,6 +144,12 @@
 						class="pkpPublication__versionPublished"
 					>
 						{translate key="publication.editDisabled"}
+					</div>
+					<div
+						v-if="workingPublication.status === getConstant('STATUS_FINISHED')"
+						class="pkpPublication__versionPublished"
+					>
+						{translate key="publication.finished.editDisabled"}
 					</div>
 					<tabs :is-side-tabs="true" class="pkpPublication__tabs" :label="publicationTabsLabel">
 						<tab id="titleAbstract" label="{translate key="publication.titleAbstract"}">

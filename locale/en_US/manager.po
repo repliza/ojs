@@ -914,6 +914,12 @@ msgstr "Provide examples of keywords or topics as a guide for authors"
 msgid "manager.setup.submissionGuidelines"
 msgstr "Submission guidelines"
 
+msgid "manager.setup.customList"
+msgstr "List"
+
+msgid "manager.setup.customChecklist"
+msgstr "Checklist"
+
 msgid "manager.setup.submissionPreparationChecklist"
 msgstr "Submission Preparation Checklist"
 

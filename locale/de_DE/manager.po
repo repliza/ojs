@@ -864,6 +864,12 @@ msgstr "Geben Sie als Hilfestellung für die Autor/innen Beispiele für Schlagwo
 msgid "manager.setup.submissionGuidelines"
 msgstr "Richtlinien für die Beitragseinreichung"
 
+msgid "manager.setup.customList"
+msgstr "Liste"
+
+msgid "manager.setup.customChecklist"
+msgstr "Checkliste"
+
 msgid "manager.setup.submissionPreparationChecklist"
 msgstr "Checkliste für die Beitragseinreichung"
 

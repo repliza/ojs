@@ -32,6 +32,8 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 			]]);
 		}
 
+		\HookRegistry::call('SubmissionsListPanel::getConfig', array(&$config, $request));
+
 		return $config;
 	}
 

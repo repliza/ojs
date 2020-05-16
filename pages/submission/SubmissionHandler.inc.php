@@ -74,21 +74,17 @@ class SubmissionHandler extends PKPSubmissionHandler {
 	 * @return array
 	 */
 	function getStepsNumberAndLocaleKeys() {
-		return array(
+		$result = array(
 			1 => 'author.submit.start',
 			2 => 'author.submit.upload',
 			3 => 'author.submit.metadata',
 			4 => 'author.submit.confirmation',
 			5 => 'author.submit.nextSteps',
 		);
-	}
 
-	/**
-	 * Get the number of submission steps.
-	 * @return int
-	 */
-	function getStepCount() {
-		return 5;
+		HookRegistry::call(strtolower_codesafe(get_class($this)) . '::getStepsNumberAndLocaleKeys', array($this, &$result));
+
+		return $result;
 	}
 }
 
