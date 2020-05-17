@@ -53,3 +53,6 @@
 [submodule "plugins/themes/healthSciences"]
 	path = plugins/themes/healthSciences
 	url = https://github.com/repliza/healthSciences.git
+[submodule "plugins/themes/resmean"]
+	path = plugins/themes/resmean
+	url = https://github.com/repliza/resmean.git
