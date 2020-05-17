@@ -71,3 +71,6 @@
 [submodule "plugins/generic/formCustomizationHelpers"]
 	path = plugins/generic/formCustomizationHelpers
 	url = https://github.com/repliza/form-customization-helpers.git
+[submodule "plugins/generic/localizationHelpers"]
+	path = plugins/generic/localizationHelpers
+	url = https://github.com/repliza/localization-helpers.git
