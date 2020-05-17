@@ -89,3 +89,6 @@
 [submodule "plugins/generic/submissionStatusFinished"]
 	path = plugins/generic/submissionStatusFinished
 	url = https://github.com/repliza/submission-status-finished.git
+[submodule "plugins/generic/userScoring"]
+	path = plugins/generic/userScoring
+	url = https://github.com/repliza/user-scoring.git
