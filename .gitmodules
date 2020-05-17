@@ -77,3 +77,6 @@
 [submodule "plugins/generic/moreNotifications"]
 	path = plugins/generic/moreNotifications
 	url = https://github.com/repliza/more-notifications.git
+[submodule "plugins/generic/sectionFlagContainsSubmissionsWithExternalInformation"]
+	path = plugins/generic/sectionFlagContainsSubmissionsWithExternalInformation
+	url = https://github.com/repliza/section-flag-contains-submissions-with-external-information.git
