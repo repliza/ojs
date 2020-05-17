@@ -83,3 +83,6 @@
 [submodule "plugins/generic/submissionChecklistPerSection"]
 	path = plugins/generic/submissionChecklistPerSection
 	url = https://github.com/repliza/submission-checklist-per-section.git
+[submodule "plugins/generic/submissionHelpers"]
+	path = plugins/generic/submissionHelpers
+	url = https://github.com/repliza/submission-helpers.git
