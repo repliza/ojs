@@ -74,3 +74,6 @@
 [submodule "plugins/generic/localizationHelpers"]
 	path = plugins/generic/localizationHelpers
 	url = https://github.com/repliza/localization-helpers.git
+[submodule "plugins/generic/moreNotifications"]
+	path = plugins/generic/moreNotifications
+	url = https://github.com/repliza/more-notifications.git
