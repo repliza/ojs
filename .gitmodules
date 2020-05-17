@@ -62,3 +62,6 @@
 [submodule "plugins/generic/customFormElementsGridIdColumn"]
 	path = plugins/generic/customFormElementsGridIdColumn
 	url = https://github.com/repliza/custom-form-elements-grid-id-column.git
+[submodule "plugins/generic/extendedSectionSettings"]
+	path = plugins/generic/extendedSectionSettings
+	url = https://github.com/repliza/extended-section-settings.git
