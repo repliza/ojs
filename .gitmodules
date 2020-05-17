@@ -86,3 +86,6 @@
 [submodule "plugins/generic/submissionHelpers"]
 	path = plugins/generic/submissionHelpers
 	url = https://github.com/repliza/submission-helpers.git
+[submodule "plugins/generic/submissionStatusFinished"]
+	path = plugins/generic/submissionStatusFinished
+	url = https://github.com/repliza/submission-status-finished.git
