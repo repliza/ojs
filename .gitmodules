@@ -56,3 +56,6 @@
 [submodule "plugins/themes/resmean"]
 	path = plugins/themes/resmean
 	url = https://github.com/repliza/resmean.git
+[submodule "plugins/generic/calculatedSubmissionTitle"]
+	path = plugins/generic/calculatedSubmissionTitle
+	url = https://github.com/repliza/calculated-submission-title.git
