@@ -23,4 +23,5 @@ describe('Page footer logo customization tests', function() {
 		cy.get('[data-cy=page-footer-logo-img]');
 	});
 	*/
+});
 
