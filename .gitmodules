@@ -97,3 +97,5 @@
 [submodule "plugins/generic/userScoringSummaryUpdate"]
 	path = plugins/generic/userScoringSummaryUpdate
 	url = https://github.com/repliza/user-scoring-summary-update.git
+[submodule "lib/plugins/themes/healthSciences"]
+	branch = stable-3_2_1
