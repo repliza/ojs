@@ -1,6 +1,7 @@
 [submodule "lib/pkp"]
 	path = lib/pkp
 	url = https://github.com/repliza/pkp-lib.git
+	branch = stable-3_2_1
 [submodule "plugins/generic/usageStats"]
         path = plugins/generic/usageStats
         url = https://github.com/pkp/usageStats.git
