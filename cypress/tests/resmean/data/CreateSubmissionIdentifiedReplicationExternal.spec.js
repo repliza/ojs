@@ -1,5 +1,5 @@
-import '../custom-form-commands';
-import '../submission-wizard-commands';
+import '../support/custom-form-commands';
+import '../support/submission-wizard-commands';
 
 describe('Data suite tests', function() {
 	it('Create submissions of type "Identified Replication (external)"', function() {
