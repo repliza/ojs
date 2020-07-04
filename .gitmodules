@@ -58,7 +58,7 @@
 	branch = stable-3_2_1
 [submodule "plugins/themes/resmean"]
 	path = plugins/themes/resmean
-	url = https://github.com/repliza/resmean.git
+	url = git@github.com:repliza/resmean.git
 [submodule "plugins/generic/calculatedSubmissionTitle"]
 	path = plugins/generic/calculatedSubmissionTitle
 	url = git@github.com:repliza/calculated-submission-title.git
