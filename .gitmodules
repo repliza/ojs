@@ -82,7 +82,7 @@
 	url = https://github.com/repliza/more-notifications.git
 [submodule "plugins/generic/sectionFlagContainsSubmissionsWithExternalInformation"]
 	path = plugins/generic/sectionFlagContainsSubmissionsWithExternalInformation
-	url = https://github.com/repliza/section-flag-contains-submissions-with-external-information.git
+	url = git@github.com:repliza/section-flag-contains-submissions-with-external-information.git
 [submodule "plugins/generic/submissionChecklistPerSection"]
 	path = plugins/generic/submissionChecklistPerSection
 	url = git@github.com:repliza/submission-checklist-per-section.git
