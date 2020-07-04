@@ -79,7 +79,7 @@
 	url = https://github.com/repliza/localization-helpers.git
 [submodule "plugins/generic/moreNotifications"]
 	path = plugins/generic/moreNotifications
-	url = https://github.com/repliza/more-notifications.git
+	url = git@github.com:repliza/more-notifications.git
 [submodule "plugins/generic/sectionFlagContainsSubmissionsWithExternalInformation"]
 	path = plugins/generic/sectionFlagContainsSubmissionsWithExternalInformation
 	url = git@github.com:repliza/section-flag-contains-submissions-with-external-information.git
