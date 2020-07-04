@@ -54,7 +54,7 @@
 	url = https://github.com/pkp/googleScholar
 [submodule "plugins/themes/healthSciences"]
 	path = plugins/themes/healthSciences
-	url = https://github.com/repliza/healthSciences.git
+	url = git@github.com:repliza/healthSciences.git
 	branch = stable-3_2_1
 [submodule "plugins/themes/resmean"]
 	path = plugins/themes/resmean
