@@ -97,4 +97,4 @@
 	url = https://github.com/repliza/user-scoring.git
 [submodule "plugins/generic/userScoringSummaryUpdate"]
 	path = plugins/generic/userScoringSummaryUpdate
-	url = https://github.com/repliza/user-scoring-summary-update.git
+	url = git@github.com:repliza/user-scoring-summary-update.git
