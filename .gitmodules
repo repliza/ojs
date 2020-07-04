@@ -88,7 +88,7 @@
 	url = https://github.com/repliza/submission-checklist-per-section.git
 [submodule "plugins/generic/submissionHelpers"]
 	path = plugins/generic/submissionHelpers
-	url = https://github.com/repliza/submission-helpers.git
+	url = git@github.com:repliza/submission-helpers.git
 [submodule "plugins/generic/submissionStatusFinished"]
 	path = plugins/generic/submissionStatusFinished
 	url = git@github.com:repliza/submission-status-finished.git
