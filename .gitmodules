@@ -67,7 +67,7 @@
 	url = https://github.com/repliza/custom-form-elements-grid-id-column.git
 [submodule "plugins/generic/extendedSectionSettings"]
 	path = plugins/generic/extendedSectionSettings
-	url = https://github.com/repliza/extended-section-settings.git
+	url = git@github.com:repliza/extended-submission-settings.git
 [submodule "plugins/generic/extendedSubmissionSettings"]
 	path = plugins/generic/extendedSubmissionSettings
 	url = https://github.com/repliza/extended-submission-settings.git
