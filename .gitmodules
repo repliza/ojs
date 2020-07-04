@@ -91,7 +91,7 @@
 	url = https://github.com/repliza/submission-helpers.git
 [submodule "plugins/generic/submissionStatusFinished"]
 	path = plugins/generic/submissionStatusFinished
-	url = https://github.com/repliza/submission-status-finished.git
+	url = git@github.com:repliza/submission-status-finished.git
 [submodule "plugins/generic/userScoring"]
 	path = plugins/generic/userScoring
 	url = git@github.com:repliza/user-scoring.git
