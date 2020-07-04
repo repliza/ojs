@@ -76,7 +76,7 @@
 	url = https://github.com/repliza/form-customization-helpers.git
 [submodule "plugins/generic/localizationHelpers"]
 	path = plugins/generic/localizationHelpers
-	url = https://github.com/repliza/localization-helpers.git
+	url = git@github.com:repliza/localization-helpers.git
 [submodule "plugins/generic/moreNotifications"]
 	path = plugins/generic/moreNotifications
 	url = git@github.com:repliza/more-notifications.git
