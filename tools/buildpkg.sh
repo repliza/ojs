@@ -13,10 +13,12 @@
 #
 #
 
-GITREP=git://github.com/pkp/ojs.git
+GITREP=git://github.com/repliza/ojs.git
 
 if [ -z "$1" ]; then
-	echo "Usage: $0 <version> [<tag>-<branch>]";
+	echo "Usage: $0 <version> [<tag>-<branch>] [-q]";
+	echo "";
+	echo "-q Quiet, only print error messages";
 	exit 1;
 fi
 
@@ -25,6 +27,7 @@ TAG=$2
 PREFIX=ojs
 BUILD=$PREFIX-$VERSION
 TMPDIR=`mktemp -d $PREFIX.XXXXXX` || exit 1
+QUIETFLAG=$3
 
 EXCLUDE="docs/dev									\
 tests											\
@@ -86,19 +89,26 @@ babel.config.js										\
 package-lock.json									\
 package.json										\
 vue.config.js										\
+config.inc.php										\
+.htpasswd											\
+.htaccess											\
+.vscode												\
+files												\
+config.TEMPLATE.inc.php								\
+web.config											\
 lib/ui-library"
 
 
 cd $TMPDIR
 
 echo -n "Cloning $GITREP and checking out tag $TAG ... "
-git clone -b $TAG --depth 1 -q -n $GITREP $BUILD || exit 1
+git clone -b $TAG --depth 1 $QUIETFLAG -n $GITREP $BUILD || exit 1
 cd $BUILD
-git checkout -q $TAG || exit 1
+git checkout $QUIETFLAG $TAG || exit 1
 echo "Done"
 
 echo -n "Checking out corresponding submodules ... "
-git submodule -q update --init --recursive >/dev/null || exit 1
+git submodule $QUIETFLAG update --init --remote --recursive --progress >/dev/null || exit 1
 echo "Done"
 
 echo "Installing composer dependencies:"
@@ -114,6 +124,10 @@ echo -n " - plugins/generic/citationStyleLanguage ... "
 composer.phar --working-dir=plugins/generic/citationStyleLanguage install --no-dev
 echo "Done"
 
+echo -n " - plugins/generic/userScoring ... "
+composer.phar --working-dir=plugins/generic/userScoring install --no-dev
+echo "Done"
+
 echo -n "Installing node dependencies... "
 npm install
 echo "Done"
@@ -123,7 +137,7 @@ npm run build
 echo "Done"
 
 echo -n "Preparing package ... "
-cp config.TEMPLATE.inc.php config.inc.php
+# cp config.TEMPLATE.inc.php config.inc.php
 find . \( -name .gitignore -o -name .gitmodules -o -name .keepme \) -exec rm '{}' \;
 rm -rf $EXCLUDE
 echo "Done"
