@@ -93,6 +93,7 @@ config.inc.php										\
 .htpasswd											\
 .htaccess											\
 .vscode												\
+run-resmean-tests.ps1								\
 files												\
 config.TEMPLATE.inc.php								\
 web.config											\
