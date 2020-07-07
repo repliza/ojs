@@ -16,3 +16,5 @@ cypress.env.json
 cypress/logs/
 cypress/screenshots/
 /.htpasswd
+.vscode
+web.config
